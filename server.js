@@ -21,12 +21,12 @@ app.get('/api/posts', (req, res) => {
 })
 
 
-// get single posts
+// get single post
 app.get('/api/posts/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const post = posts.find((post) => post.id === id )
 
-    if (post){
+    if (post){ 
         return res
         .status(200)
         .json(post)
